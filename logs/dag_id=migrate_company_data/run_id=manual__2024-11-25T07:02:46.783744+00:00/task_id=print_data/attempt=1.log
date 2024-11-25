@@ -1,14 +1,14 @@
-[2024-11-22T10:24:09.065+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: migrate_company_data.print_data manual__2024-11-22T10:24:05.221627+00:00 [queued]>
-[2024-11-22T10:24:09.068+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: migrate_company_data.print_data manual__2024-11-22T10:24:05.221627+00:00 [queued]>
-[2024-11-22T10:24:09.068+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
-[2024-11-22T10:24:09.072+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): print_data> on 2024-11-22 10:24:05.221627+00:00
-[2024-11-22T10:24:09.074+0000] {standard_task_runner.py:60} INFO - Started process 200 to run task
-[2024-11-22T10:24:09.076+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'migrate_company_data', 'print_data', 'manual__2024-11-22T10:24:05.221627+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/migrate_company_dag.py', '--cfg-path', '/tmp/tmpyxz9t781']
-[2024-11-22T10:24:09.077+0000] {standard_task_runner.py:88} INFO - Job 14: Subtask print_data
-[2024-11-22T10:24:09.095+0000] {task_command.py:423} INFO - Running <TaskInstance: migrate_company_data.print_data manual__2024-11-22T10:24:05.221627+00:00 [running]> on host 51b91a4801b5
-[2024-11-22T10:24:09.127+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Au Pakin' AIRFLOW_CTX_DAG_ID='migrate_company_data' AIRFLOW_CTX_TASK_ID='print_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-22T10:24:05.221627+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-22T10:24:05.221627+00:00'
-[2024-11-22T10:24:09.128+0000] {logging_mixin.py:188} INFO - Printing 9 records:
-[2024-11-22T10:24:09.128+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.787+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: migrate_company_data.print_data manual__2024-11-25T07:02:46.783744+00:00 [queued]>
+[2024-11-25T07:02:50.791+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: migrate_company_data.print_data manual__2024-11-25T07:02:46.783744+00:00 [queued]>
+[2024-11-25T07:02:50.791+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 1
+[2024-11-25T07:02:50.795+0000] {taskinstance.py:2217} INFO - Executing <Task(_PythonDecoratedOperator): print_data> on 2024-11-25 07:02:46.783744+00:00
+[2024-11-25T07:02:50.798+0000] {standard_task_runner.py:60} INFO - Started process 200 to run task
+[2024-11-25T07:02:50.800+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'migrate_company_data', 'print_data', 'manual__2024-11-25T07:02:46.783744+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/migrate_company_dag.py', '--cfg-path', '/tmp/tmpvh2scsbp']
+[2024-11-25T07:02:50.800+0000] {standard_task_runner.py:88} INFO - Job 16: Subtask print_data
+[2024-11-25T07:02:50.818+0000] {task_command.py:423} INFO - Running <TaskInstance: migrate_company_data.print_data manual__2024-11-25T07:02:46.783744+00:00 [running]> on host 00b5fd7454d0
+[2024-11-25T07:02:50.852+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Au Pakin' AIRFLOW_CTX_DAG_ID='migrate_company_data' AIRFLOW_CTX_TASK_ID='print_data' AIRFLOW_CTX_EXECUTION_DATE='2024-11-25T07:02:46.783744+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-25T07:02:46.783744+00:00'
+[2024-11-25T07:02:50.853+0000] {logging_mixin.py:188} INFO - Printing 9 records:
+[2024-11-25T07:02:50.853+0000] {logging_mixin.py:188} INFO - {
     "id": 30,
     "security_id": "90000002",
     "name_th": "บริษัท แอดวานซ์ เว็บ เซอร์วิส จำกัด(มหาชน)",
@@ -27,7 +27,7 @@
     "revenue_amount": 67014069.2,
     "revenue_year": 2564
 }
-[2024-11-22T10:24:09.128+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.853+0000] {logging_mixin.py:188} INFO - {
     "id": 710,
     "security_id": "90000003",
     "name_th": "บริษัท สิทรอน เพาเวอร์ จำกัด (มหาชน)",
@@ -46,7 +46,7 @@
     "revenue_amount": 327612834.0,
     "revenue_year": 2564
 }
-[2024-11-22T10:24:09.128+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.853+0000] {logging_mixin.py:188} INFO - {
     "id": 842,
     "security_id": "90000004",
     "name_th": "บริษัท สตอเรจ เอเชีย จำกัด (มหาชน)",
@@ -65,7 +65,7 @@
     "revenue_amount": 18579190.81,
     "revenue_year": 2564
 }
-[2024-11-22T10:24:09.128+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.853+0000] {logging_mixin.py:188} INFO - {
     "id": 1762,
     "security_id": "90000005",
     "name_th": "บริษัท เดอะ พรอดดิจี (ประเทศไทย) จำกัด (มหาชน)",
@@ -84,7 +84,7 @@
     "revenue_amount": 64004209.0,
     "revenue_year": 2565
 }
-[2024-11-22T10:24:09.129+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.854+0000] {logging_mixin.py:188} INFO - {
     "id": 1182,
     "security_id": "90000006",
     "name_th": "บริษัท อินเทลลิจิสต์ จำกัด (มหาชน)",
@@ -103,7 +103,7 @@
     "revenue_amount": 91273487.06,
     "revenue_year": 2565
 }
-[2024-11-22T10:24:09.129+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.854+0000] {logging_mixin.py:188} INFO - {
     "id": 1936,
     "security_id": "90000007",
     "name_th": "บริษัท เอ็มเอ็มเอ็ม แคปปิตอล จำกัด (มหาชน)",
@@ -122,7 +122,7 @@
     "revenue_amount": 127247462.0,
     "revenue_year": 2565
 }
-[2024-11-22T10:24:09.129+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.854+0000] {logging_mixin.py:188} INFO - {
     "id": 2477,
     "security_id": "90000008",
     "name_th": "บริษัท เอส เอ็น เซอร์วิส โซลูชั่น จำกัด (มหาชน)",
@@ -141,7 +141,7 @@
     "revenue_amount": 249773247.27,
     "revenue_year": 2565
 }
-[2024-11-22T10:24:09.129+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.854+0000] {logging_mixin.py:188} INFO - {
     "id": 2623,
     "security_id": "90000009",
     "name_th": "บริษัท เจเนอรัล เอาท์ซอร์สซิ่ง จำกัด (มหาชน)",
@@ -160,7 +160,7 @@
     "revenue_amount": 92254015.0,
     "revenue_year": 2565
 }
-[2024-11-22T10:24:09.129+0000] {logging_mixin.py:188} INFO - {
+[2024-11-25T07:02:50.854+0000] {logging_mixin.py:188} INFO - {
     "id": 3267,
     "security_id": "90000010",
     "name_th": "บริษัท ลีโอวูด จำกัด (มหาชน)",
@@ -179,7 +179,7 @@
     "revenue_amount": 107344435.31,
     "revenue_year": 2566
 }
-[2024-11-22T10:24:09.129+0000] {python.py:202} INFO - Done. Returned value was: None
-[2024-11-22T10:24:09.132+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=migrate_company_data, task_id=print_data, execution_date=20241122T102405, start_date=20241122T102409, end_date=20241122T102409
-[2024-11-22T10:24:09.174+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
-[2024-11-22T10:24:09.182+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-25T07:02:50.854+0000] {python.py:202} INFO - Done. Returned value was: None
+[2024-11-25T07:02:50.857+0000] {taskinstance.py:1149} INFO - Marking task as SUCCESS. dag_id=migrate_company_data, task_id=print_data, execution_date=20241125T070246, start_date=20241125T070250, end_date=20241125T070250
+[2024-11-25T07:02:50.901+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-11-25T07:02:50.910+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
