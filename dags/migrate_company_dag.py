@@ -1,6 +1,13 @@
 from airflow.decorators import dag
 from datetime import datetime
-from tasks.migrate_company_task import query_company_security, map_to_dataclass, filter_invalid_ids, print_data
+from tasks.migrate_company_task import (
+    query_all_company_securities,
+    map_to_company_securities_list,
+    filter_invalid_companies,
+    map_to_company_list,
+    map_to_company_information_list,
+    print_data,
+)
 
 @dag(
     dag_id="migrate_company_data",
@@ -11,11 +18,27 @@ from tasks.migrate_company_task import query_company_security, map_to_dataclass,
 )
 def migrate_company_data():
 
-    query_company_security_task = query_company_security()
-    mapped_data_task = map_to_dataclass(query_company_security_task)
-    filtered_data_task = filter_invalid_ids(mapped_data_task)
-    print_filtered_data_task = print_data(filtered_data_task)
+    # Query all company securities
+    query_company_securities_task = query_all_company_securities()
 
-    query_company_security_task >> mapped_data_task >> filtered_data_task >> print_filtered_data_task
+    # Map query result to CompanySecurities list
+    mapped_data_task = map_to_company_securities_list(query_company_securities_task)
+
+    # Filter out invalid companies
+    filtered_data_task = filter_invalid_companies(mapped_data_task)
+
+    # Map to company data and company information data in parallel
+    mapped_company_task = map_to_company_list(filtered_data_task)
+    mapped_company_info_task = map_to_company_information_list(filtered_data_task)
+
+    # Print tasks for both mappings
+    print_companies_task = print_data(mapped_company_task)
+    print_company_info_task = print_data(mapped_company_info_task)
+
+    # Define the task dependencies
+    query_company_securities_task >> mapped_data_task >> filtered_data_task
+    filtered_data_task >> [mapped_company_task, mapped_company_info_task]
+    mapped_company_task >> print_companies_task
+    mapped_company_info_task >> print_company_info_task
 
 migrate_company_data()
