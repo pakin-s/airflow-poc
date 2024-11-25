@@ -1,3 +1,4 @@
+# don't forget to take a look in .env file
 init:
 	docker compose up airflow-init
 
