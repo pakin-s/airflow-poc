@@ -1,0 +1,46 @@
+# Python bytecode
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Airflow logs
+logs/
+!logs/.gitkeep  # Optional: Keep the directory but ignore its contents
+
+# DAG processor logs
+dag_processor_manager.log
+
+# Airflow scheduler logs
+scheduler/
+
+# SQLAlchemy database files
+*.db
+
+# Docker-related files
+*.env
+*.env.*
+.envrc
+.env.*
+
+# Docker compose override files
+docker-compose.override.yml
+
+# Local virtual environments
+.venv/
+venv/
+
+# Jupyter Notebook checkpoints (if applicable)
+.ipynb_checkpoints/
+
+# Temporary files and directories
+*.swp
+*.swo
+*.~
+*.bak
+.DS_Store
+Thumbs.db
+
+# Airflow-generated files
+airflow.cfg
+webserver_config.py
