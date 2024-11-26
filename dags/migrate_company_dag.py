@@ -18,24 +18,18 @@ from tasks.migrate_company_task import (
 )
 def migrate_company_data():
 
-    # Query all company securities
     query_company_securities_task = query_all_company_securities()
 
-    # Map query result to CompanySecurities list
     mapped_data_task = map_to_company_securities_list(query_company_securities_task)
 
-    # Filter out invalid companies
     filtered_data_task = filter_invalid_companies(mapped_data_task)
 
-    # Map to company data and company information data in parallel
     mapped_company_task = map_to_company_list(filtered_data_task)
     mapped_company_info_task = map_to_company_information_list(filtered_data_task)
 
-    # Print tasks for both mappings
     print_companies_task = print_data(mapped_company_task)
     print_company_info_task = print_data(mapped_company_info_task)
 
-    # Define the task dependencies
     query_company_securities_task >> mapped_data_task >> filtered_data_task
     filtered_data_task >> [mapped_company_task, mapped_company_info_task]
     mapped_company_task >> print_companies_task

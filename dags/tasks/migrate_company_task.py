@@ -45,7 +45,6 @@ def map_to_company_securities_list(result) -> List[CompanySecurities]:
         ) for row in result
     ]
 
-    # Serialize the CompanySecurities objects to a dictionary
     serialized_data = [asdict(record) for record in mapped_data]
 
     return serialized_data
@@ -62,7 +61,6 @@ def filter_invalid_companies(mapped_data: List[CompanySecurities]) -> List[Compa
 
 @task
 def map_to_company_list(data: List[CompanySecurities]) -> List[Company]:
-    # Serialize the Company objects to a dictionary
     mapped_data = [
         Company(
             name_th=record['name_th'],
@@ -74,14 +72,12 @@ def map_to_company_list(data: List[CompanySecurities]) -> List[Company]:
         for record in data
     ]
 
-    # Serialize the Company objects to a dictionary
     serialized_data = [asdict(record) for record in mapped_data]
 
     return serialized_data
 
 @task
 def map_to_company_information_list(data: List[CompanySecurities]) -> List[CompanyInformation]:
-    # Serialize the CompanyInformation objects to a dictionary
     mapped_data = [
         CompanyInformation(
             juristic_id=record['juristic_id'],
@@ -97,7 +93,6 @@ def map_to_company_information_list(data: List[CompanySecurities]) -> List[Compa
         for record in data
     ]
 
-    # Serialize the CompanyInformation objects to a dictionary
     serialized_data = [asdict(record) for record in mapped_data]
 
     return serialized_data
